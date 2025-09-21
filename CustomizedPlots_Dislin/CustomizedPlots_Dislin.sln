@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6989167D-11E4-40FE-8C1A-2192A86A7E90}") = "CustomizedPlotting", "CustomPlotting\CustomizedPlotting.vfproj", "{EE241771-645B-475E-8969-441D21E75F8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE241771-645B-475E-8969-441D21E75F8D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EE241771-645B-475E-8969-441D21E75F8D}.Debug|Win32.Build.0 = Debug|Win32
+		{EE241771-645B-475E-8969-441D21E75F8D}.Debug|x64.ActiveCfg = Debug|x64
+		{EE241771-645B-475E-8969-441D21E75F8D}.Debug|x64.Build.0 = Debug|x64
+		{EE241771-645B-475E-8969-441D21E75F8D}.Release|Win32.ActiveCfg = Release|Win32
+		{EE241771-645B-475E-8969-441D21E75F8D}.Release|Win32.Build.0 = Release|Win32
+		{EE241771-645B-475E-8969-441D21E75F8D}.Release|x64.ActiveCfg = Release|x64
+		{EE241771-645B-475E-8969-441D21E75F8D}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8B2693A-F0BB-477A-A8E1-B7AF4360C906}
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
