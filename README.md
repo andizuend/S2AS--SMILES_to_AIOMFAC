@@ -1,3 +1,6 @@
-# S2AS -- convert SMILES to AIOMFAC input files
+# S2AS tool – convert SMILES to AIOMFAC input files
 
-The S2AS tool generates automatically and systematically a valid AIOMFAC(-web)-style model input file for any system characterized by molecular organic components in terms of their Simplified Molecular Input Line Entry System (SMILES) descriptors.
+The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any system characterized by molecular organic components in terms of their Simplified Molecular Input Line Entry System ([SMILES](https://en.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System "SMILES")) descriptors. To do so, the S2AS code relies on a customized list of SMILES arbitrary target specification ([SMARTS](https://en.wikipedia.org/wiki/SMILES_arbitrary_target_specification "SMARTS")) patterns to detect and match individual AIOMFAC subgroups. Motivation and details about the S2AS tool and its applications can be found in an associated publication (*Amaladhasan et al., in prep.*).
+
+## Dependencies
+- epam Indigo package
