@@ -4,7 +4,7 @@ The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any syst
 ### Contents of this file
 - [Dependencies](#dependencies)
 - [Installation instructions](#installation-instructions)
-- [Test the installation](#test-the-installation)
+- [Test the installation](#(5)-test-the-installation)
 - [Quick guide to running S2AS](#quick-guide-to-running-S2AS)
 
 ## Dependencies
