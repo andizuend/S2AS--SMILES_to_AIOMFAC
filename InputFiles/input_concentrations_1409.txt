@@ -1,6 +1,6 @@
-total molar or molecular concentrations (see unit) of all components (1: ...) per unit volume of air for given concentration unit
+total molar or molecular concentrations (see unit) of all components (1: ...) per unit volume of air for given concentration unit; the first concentration value in the list below is for water vapour, the second for the first organic compound, etc.
 ---------------------------------------------------------------------------------------------------------------------------------
-[mol/m^3]   !concentration unit of listed data (state whether it is [molec/cm^3] or [mol/m^3]); first concentation value is for water vapour
+[mol/m^3]   !concentration unit of listed data (state whether it is [molec/cm^3] or [mol/m^3])
 			 
 6.393683E-01
 6.18269E-12
