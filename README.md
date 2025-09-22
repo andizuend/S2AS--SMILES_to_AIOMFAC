@@ -32,9 +32,10 @@ For use of the Indigo toolkit within the S2AS program, the related package and p
 #### (5) Test the installation
 - In a command prompt type: `obabel`\
   The version of the Open Babel software installed should be displayed -- if not, check the installation steps above again and/or use an older, compatible version of Open Bable and the Python bindings (successful tests involved Open Babel v3.1.1 GUI 64bit on Windows and openbabel-wheel v3.1.1.22).
-- Optional check when using Microsoft Visual Studio Community: open the `SMILES_to_AIOMFAC.sln` program from the main folder (S2AS__SMILES_to_AIOMFAC) in MS Visual Studio. Check that Python 3.XX (64-bit) is set as the Python Environment (an installed version compatible with the OpenBable bindings outlined in step 3).
- check that the above Python environment includes epam.indigo as well as openbabel;
-- Run the program with a test input file like "InputFiles/smiles_0160.txt" see related settings near source code line 73 in file `SMILES_to_AIOMFAC_input.py`;
-- If the S2AS program runs without errors in Visual Studio, then all necessary packages should be present; else, check for missing packages and/or potential causes of errors (such as conflict with another installed Python version.
-- 
-- One potential issue with running the .bat files is that your default Python version is different from the one installed above. If so, either run the .bat file in a dedicated Python environment for an installed version of Python compatible with Open Babel or uninstall the newer versions of Python (unless you really need those elsewhere).
+- Optional check when using the included Microsoft Visual Studio Community solution and project files (SMILES_to_AIOMFAC.sln); this requires that you have MS Visual Studio installed with Python support.
+	- Open the `SMILES_to_AIOMFAC.sln` program from the main folder (S2AS__SMILES_to_AIOMFAC) in MS Visual Studio. Check that Python 3.XX (64-bit) is set as the Python Environment (an installed version compatible with the OpenBable bindings outlined in step 3).
+ 	- Check that the above Python environment includes epam.indigo as well as openbabel;
+	- Run the program with a test input file like "InputFiles/smiles_0160.txt" see related settings near source code line 73 in file `SMILES_to_AIOMFAC_input.py`;
+	- If the S2AS program runs without errors in Visual Studio, then all necessary packages should be present; else, check for missing packages and/or potential causes of errors (such as conflict with another installed Python version.
+- Test with a .bat script file (on Windows):  
+	- One potential issue with running the .bat files is that your default Python version is different from the one installed above. If so, either run the .bat file in a dedicated Python environment for an installed version of Python compatible with Open Babel or uninstall the newer versions of Python (unless you really need those elsewhere).
