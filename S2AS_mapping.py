@@ -509,7 +509,9 @@ def detAIOMFACsubgs(ind, molec, is_PureAlc, debugging_verbose, debugRenderedStru
 
       i = ii
 
-
-
    return subgs, ii, count_SMARTS_exceptions
 # === end of function ===================================================================
+   
+# explicitly clean up indigo resources before exit
+del renderer
+del indigo

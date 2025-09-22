@@ -70,8 +70,8 @@ if len(cmdline) > 1:
     debugging_verbose = False
 else: 
     # for debugging, use the following input file path instead of the command line input
-    smiles_file = "InputFiles/smiles_0160.txt"
-    #smiles_file = "InputFiles/smiles_1270.txt"
+    smiles_file = "InputFiles/smiles_0001.txt"
+    #smiles_file = "InputFiles/smiles_1409.txt"
 
 if debugging_verbose:
    debugRenderedStructures = True   #set to True for debugging and showing of highlighted subgroup in a molecule (file will be overwritten);
@@ -221,6 +221,10 @@ else:
 _ = ModSmilesTools.writeAIOMFACfile(AIOMFACfname, outpath, SMILESlist, cpsubs, waterAsComp01)
 
 timeStop = time.perf_counter()
+
+# explicitly clean up indigo resources before exit
+del renderer
+del indigo
 
 print('')
 print('SMILES processing for AIOMFAC done. The generated AIOMFAC input file,', AIOMFACfname, ', is located')
