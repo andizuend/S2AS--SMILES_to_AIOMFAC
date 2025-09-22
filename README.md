@@ -10,7 +10,7 @@ The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any syst
 Note that the following steps are outlined for a Windows 64-bit installation; similar steps may need to be taken on a Linux machine, but details will differ.
 
 #### (1) Python and pip installation / updates
-- Download & install Python v3.10.10 or newer for 64-bit on Windows, e.g. from [here](https://www.python.org/downloads/windows/). Version 1.0 of the S2AS tool has been confirmed to work with Python v3.13.7 (as well as v3.10.10).
+- Download & install Python v3.13.7 or newer for 64-bit on Windows, e.g. from [here](https://www.python.org/downloads/windows/). Version 1.0 of the S2AS tool has been confirmed to work with Python v3.13.7 (as well as the older v3.10.10).
 - Make sure that the python 'pip' is installed and up to date. In a Windows command prompt with administrator rights (click Run as Administrator) type:  
 	`python -m pip install --upgrade pip`
 
@@ -35,8 +35,7 @@ For use of the Indigo toolkit within the S2AS program, the related package and p
 - Test with a .bat script file (on Windows):  
 	- One potential issue with running the .bat files is that your default Python version is different from the one installed above. If so, either run the .bat file in a dedicated Python environment for an installed version of Python compatible with Open Babel or uninstall the newer versions of Python (unless you really need those elsewhere).
 - Optional check when using the included Microsoft Visual Studio Community solution and project files (SMILES_to_AIOMFAC.sln); this requires that you have MS Visual Studio installed with Python support.
-	- Open the `SMILES_to_AIOMFAC.sln` program from the main folder (S2AS__SMILES_to_AIOMFAC) in MS Visual Studio. Check that Python 3.xx (64-bit) is set as the Python Environment (the installed version compatible with the OpenBable bindings outlined in step 3).
- 	- Check that the above Python environment includes epam.indigo as well as openbabel;
-	- Run the program with a test input file like "InputFiles/smiles_0160.txt" see related settings near source code line 73 in file `SMILES_to_AIOMFAC_input.py`;
-	- If the S2AS program runs without errors in Visual Studio, then all necessary packages should be present; else, check for missing packages and/or potential causes of errors (such as conflict with another installed Python version.
+	- Open the `SMILES_to_AIOMFAC.sln` program from the main folder (S2AS__SMILES_to_AIOMFAC) in MS Visual Studio. Check that Python 3.xx (64-bit) is set as the Python Environment (the installed version compatible with the Open Bable bindings outlined in step 3). Also check that the epam.indigo package is part of the Python environment set to be used for the current Visual Studio project (if not, add it via the environment-specific package manager in Visual Studio).
+	- Run the program with a test input file like "InputFiles/smiles_0001.txt" see related settings near source code line 80 in file `SMILES_to_AIOMFAC_input.py`;
+	- If the S2AS program runs without errors in Visual Studio, then all necessary packages should be present; else, check for missing packages and/or potential causes of errors (such as conflict with another installed Python version or environment).
 
