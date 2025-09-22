@@ -77,6 +77,6 @@ Once the two input files have been prepared, you are ready to run the Python scr
 	- Open a command terminal and navigate to your local `S2AS__SMILES_to_AIOMFAC` repository directory.
  	- Execute the following command: `python .\SMILES_to_AIOMFAC_input.py ./InputFiles/smiles_????.txt`, where the command line argument 1 is the relative path to and  actual name of your `smiles_????.txt` file. As with Option 1, successful execution of the S2AS program will result in the generation of a file labelled `input_????.txt` in folder `OutputFiles`.
 - Option 3: (Visual Studio or other IDE)
-	- Alternatively, if code debugging is of interest and/or structures of the molecules and the mapping of AIOMFAC subgroups should be visualized, you can run the Visual Studio solution `SMILES_to_AIOMFAC.sln` (see also [Test the installation](#5-test-the-installation).
+	- Alternatively, if code debugging is of interest and/or structures of the molecules and the mapping of AIOMFAC subgroups should be visualized, you can run the Visual Studio solution `SMILES_to_AIOMFAC.sln` (see also [Test the installation](#5-test-the-installation)).
  	- In this case, the file name of your customized SMILES input file should be entered on source code line 73 of `SMILES_to_AIOMFAC_input.py` (within Visual Studio).
   	- Visualizations and additional debbuging output can be enabled on line 51 of the `SMILES_to_AIOMFAC_input.py` file; setting `debugging_verbose = True`.
