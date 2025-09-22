@@ -1,0 +1,12 @@
+total molar or molecular concentrations (see unit) of all components (1: ...) per unit volume of air for given concentration unit
+---------------------------------------------------------------------------------------------------------------------------------
+[mol/m^3]   !concentration unit of listed data (state whether it is [molec/cm^3] or [mol/m^3]); first concentation value is for water vapour
+			 
+6.00000E-01
+5.00000E-12
+4.00000E-12
+3.00000E-12
+2.00000E-12
+1.00000E-12
+9.00000E-13
+8.00000E-13
