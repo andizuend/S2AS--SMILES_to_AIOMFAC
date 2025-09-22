@@ -1,13 +1,20 @@
 # S2AS tool – convert SMILES to AIOMFAC input files
 The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any system characterized by a list of molecular organic components in terms of their Simplified Molecular Input Line Entry System ([SMILES](https://en.wikipedia.org/wiki/Simplified_Molecular_Input_Line_Entry_System "SMILES")) descriptors. To do so, the S2AS code relies on a customized list of SMILES arbitrary target specification ([SMARTS](https://en.wikipedia.org/wiki/SMILES_arbitrary_target_specification "SMARTS")) patterns to detect and match individual AIOMFAC subgroups and to treat exceptions consistently. The general motivation and details about the S2AS tool and its applications can be found in an associated publication by Amaladhasan et al., (*in prep.*). The abbreviation AIOMFAC stands for Aerosol Inorganic–Organic Mixtures Functional groups Activity Coefficients (see also [AIOMFAC website](https://aiomfac.lab.mcgill.ca "AIOMFAC") and the [AIOMFAC code repository](https://github.com/andizuend/AIOMFAC)).
 
+### Contents of this file
+- [Dependencies](#dependencies)
+- [Installation instructions](#installation-instructions)
+- [Test the installation](#test-the-installation)
+- [Quick guide to running S2AS](#quick-guide-to-running-S2AS)
+
 ## Dependencies
 - Open Babel and its Python bindings (see installation instructions below)
 - epam Indigo package
 - (optional) MS Visual Studio Community (for use of included project and solution files `SMILES_to_AIOMFAC.sln`)
 
-## Installation instructions (updated as of September 2025)
-Note that the following steps are outlined for a Windows 64-bit installation; similar steps may need to be taken on a Linux machine, but details will differ.
+## Installation instructions
+> [!NOTE] 
+> The following steps are outlined for a Windows 64-bit installation (updated as of September 2025); similar steps will need to be taken on a Linux machine, but the details will differ.
 
 #### (1) Python and pip installation / updates
 - Download & install Python v3.13.7 or newer for 64-bit on Windows, e.g. from [here](https://www.python.org/downloads/windows/). Version 1.0 of the S2AS tool has been confirmed to work with Python v3.13.7 (as well as the older v3.10.10).
@@ -29,7 +36,7 @@ Note that the following steps are outlined for a Windows 64-bit installation; si
 For use of the Indigo toolkit within the S2AS program, the related package and python bindings need to be installed:
 - Run in a command prompt with administrator rights:  `pip install epam.indigo`
 
-#### (5) Test the installations
+#### (5) Test the installation
 - In a command prompt type: `obabel`\
   The version of the Open Babel software installed should be displayed -- if not, check the installation steps above again and/or use an older, compatible version of Open Bable and the Python bindings (successful tests involved Open Babel v3.1.1 GUI 64bit on Windows and openbabel-wheel v3.1.1.22).
 - Test with a .bat script file (on Windows) or equivalent Python command:
@@ -42,3 +49,8 @@ For use of the Indigo toolkit within the S2AS program, the related package and p
 	- Run the program with a test input file like "InputFiles/smiles_0001.txt" see related settings near source code line 73 in file `SMILES_to_AIOMFAC_input.py`;
 	- If the S2AS program runs without errors in Visual Studio, then all necessary packages should be present; else, check for missing packages and/or potential causes of errors (such as conflict with another installed Python version or environment).
 
+
+# Quick guide to running S2AS
+If all you wish to do is to run the S2AS program for your own system of components, this is relatively straightforward. The following inputs need to be provided.
+- A
+- B
