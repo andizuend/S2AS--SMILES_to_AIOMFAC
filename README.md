@@ -51,6 +51,16 @@ For use of the Indigo toolkit within the S2AS program, the related package and p
 
 
 # Quick guide to running S2AS
-If all you wish to do is to run the S2AS program for your own system of components, this is relatively straightforward. The following inputs need to be provided.
-- A
-- B
+If all you wish to do is to run the S2AS program for your own system of components, this is relatively straightforward task.\
+The following inputs (files) need to be provided.
+#### SMILES input file:
+1. For your system, i.e. the list of organic components, generate a SMILES input file containing one SMILES string per line, as shown in the example files in folder `InputFiles`. Have a look at the `smiles_0001.txt` example file for its structure and use it as a template.
+2. Name and save your file, e.g. as `smiles_0002.txt` or similar, the number part can vary, but the prefix `smiles_`is needed.
+3. Copy this file into the `InputFiles` folder. Do not list the SMILES of water (or other inorganic components) in that file; S2AS v1.0 only supports the parsing of organic molecules (see details in the article by Amaladhasan et al.).
+
+#### Concentrations input file:
+4. Provide a text file containing the concentration information for each component (i.e. each line in the SMILES file). Use the file `input_concentrations_0001.txt` from folder `InputFiles` as a template.
+5. Note the very first concentration value stated should be that of water, since the S2AS-generated AIOMFAC input file assumes that water is part of the mixture. Then, the second concentration value will refer to the first organic component (corresponding to the first line in the `smiles_????.txt` file).
+6. As stated in the concentration file header, on line 3, you can state the unit of concentration used as either [mol/m^3] or [molec/cm^3]. Only these two options are supported (convert from other units when necessary).
+7. Save your `input_concentrations_????.txt` file using the same number part (in place of ????) as for the `smiles_????.txt` file.
+8. Note that the concentrations are not directly used by the S2AS tool; however, in the case that an invalid SMILES code is detected, the offending SMILES (row) will be removed and the SMILES list updated. In that case, the corresponding row in the `input_concentrations_????.txt` file will be removed too. A cleaned-up version of the `smiles_????.txt` input file and the `input_concentrations_????.txt` will be copied to the `InputFiles` folder as part of the S2AS program execution. For reference, the original SMILES list will also be saved there, labelled as `smiles_????_orig.txt`.
