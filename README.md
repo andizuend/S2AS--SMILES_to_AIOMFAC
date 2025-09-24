@@ -27,8 +27,6 @@ The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any syst
 #### (2) Open Babel
 - Download & install the Open Babel v3.1.1 (GUI) 64-bit for Windows. Download the [executable installer file](https://github.com/openbabel/openbabel/releases/); a newer version may be available at your time of installation (you could try the installation with that newer version).
 
-- Important follow-up step: delete the `BABEL_DATADIR` variable in the environment variables of Windows. Type in a search field: `edit environment variables` and open the app for editing such variables.
-
 #### (3) Python bindings to openbabel (and pybel)
 - To install Python openbabel bindings on Windows, I recommend using a precompiled wheel (`.whl` file).\
   Try: `pip install openbabel-wheel`, see also: [https://pypi.org/project/openbabel-wheel/](https://pypi.org/project/openbabel-wheel/) for dependencies and compatible Python versions.
