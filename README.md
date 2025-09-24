@@ -88,4 +88,5 @@ Once the two input files have been prepared, you are ready to run the Python scr
 ### Use as input for AIOMFAC-web
 > [!TIP]
 > For smaller systems (less than ~50 components), the generated AIOMFAC-web-style input files (`input_????.txt`) can, e.g., be used for mixture activity coefficient computations with the [AIOMFAC-web model](https://aiomfac.lab.mcgill.ca/index.html). For that purpose, the `input_????.txt` should be further modified in a text editor to add, near the end, rows of temperature and component mole fractions (or mass fractions) of interest. The S2AS program writes a single, generic line of composition and temperature inputs for AIOMFAC-web – modify that line and add similar rows (as needed). An example file for such mixture composition inputs is shown [here](https://aiomfac.lab.mcgill.ca/examples/input_examp1.txt). Once your `input_????.txt` file has been edited to include the desired composition points, it can be [uploaded to AIOMFAC-web](https://aiomfac.lab.mcgill.ca/file_upload.html) and run online for generating AIOMFAC predictions of nonideal mixing.
-
+>
+> The AIOMFAC thermodynamic mixing model for single-liquid-phase systems and related code are also accessible via [the AIOMFAC repository](https://github.com/andizuend/AIOMFAC). That version operates with S2AS-generated input files.
