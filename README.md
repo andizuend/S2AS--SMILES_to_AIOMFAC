@@ -17,7 +17,7 @@ The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any syst
 
 ## Installation instructions
 > [!NOTE] 
-> The following steps are outlined for a Windows 64-bit installation (updated as of September 2025); similar steps will need to be taken on a Linux machine, but the details will differ.
+> The following steps are first outlined for a Windows 64-bit installation (updated as of September 2025); similar steps are also shown for installation on a Linux machine (tested with Ubuntu 24.04 LTS); the details on other Linux distributions may differ.
 
 #### (1) Python and pip installation / updates
 - Download & install Python v3.13.7 or newer for 64-bit on Windows, e.g. from [here](https://www.python.org/downloads/windows/). Version 1.0 of the S2AS tool has been confirmed to work with Python v3.13.7 (as well as the older v3.10.10).
