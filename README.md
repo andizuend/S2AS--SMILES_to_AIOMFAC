@@ -31,8 +31,6 @@ The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any syst
 - To install Python openbabel bindings on Windows, I recommend using a precompiled wheel (`.whl` file).\
   Try: `pip install openbabel-wheel`, see also: [https://pypi.org/project/openbabel-wheel/](https://pypi.org/project/openbabel-wheel/) for dependencies and compatible Python versions.
 
-- Alternative (to be tested on Linux; try to install python bindings via `pip install -U openbabel` or:  `pip install openbabel==3.1.1`  for a specific version; see also [https://pypi.org/project/openbabel/](https://pypi.org/project/openbabel/).
-
 #### (4) Indigo toolkit
 For use of the Indigo toolkit within the S2AS program, the related package and python bindings need to be installed:
 - Run in a command prompt with administrator rights:  `pip install epam.indigo`
