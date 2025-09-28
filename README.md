@@ -17,12 +17,17 @@ The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any syst
 
 ## Installation instructions
 > [!NOTE] 
-> The following steps are first outlined for a Windows 64-bit installation (updated as of September 2025); similar steps are also shown for installation on a Linux machine (tested with Ubuntu 24.04 LTS); the details on other Linux distributions may differ.
+> The following steps are first outlined for a Windows 64-bit installation (denoted by steps tagged as [Windows]). Equivalent steps are also shown for installation on a Linux machine (denoted by tag [Linux]). The Linux steps were tested with Ubuntu 24.04 LTS; the details for other Linux distributions may differ. Depending on your operating system, only follow either the [Windows] or the [Linux] steps (not both).
 
 #### (1) Python and pip installation / updates
-- Download & install Python v3.13.7 or newer for 64-bit on Windows, e.g. from [here](https://www.python.org/downloads/windows/). Version 1.0 of the S2AS tool has been confirmed to work with Python v3.13.7 (as well as the older v3.10.10).
-- Make sure that the python 'pip' is installed and up to date. In a Windows command prompt with administrator rights (click Run as Administrator) type:  
+- [Windows] Download & install Python v3.13.7 or newer for 64-bit on Windows, e.g. from [here](https://www.python.org/downloads/windows/). Version 1.0 of the S2AS tool has been confirmed to work with Python v3.13.7 (as well as the older v3.10.10).
+- [Windows] Make sure that the python 'pip' is installed and up to date. In a Windows command prompt with administrator rights (click Run as Administrator) type:  
 	`python -m pip install --upgrade pip`
+- [Linux] Make sure a recent version of python3 is installed (check in a terminal with command `python --version` or `python3 --version`). For convenience make sure that python refers to python3 via command `sudo apt install python-is-python3`
+- [Linux] Open a command terminal, navigate to the project folder (e.g. S2AS__SMILES_to_AIOMFAC) and generate a virtual environment (venv) for the project.
+  - execute `sudo apt install python3-venv` (if not already installed on your system)
+  - create a new venv with command: `python3 -m venv .venv`
+  - activate your new venv so Python is using it with command: `source .venv/bin/activate`
 
 #### (2) Open Babel
 - Download & install the Open Babel v3.1.1 (GUI) 64-bit for Windows. Download the [executable installer file](https://github.com/openbabel/openbabel/releases/); a newer version may be available at your time of installation (you could try the installation with that newer version).
