@@ -26,7 +26,7 @@ The **S2AS tool** generates a valid AIOMFAC model input file for any system char
 - [Linux] Make sure a recent version of python3 is installed (check in a terminal with command `python --version` or `python3 --version`). For convenience make sure that python refers to python3 via command `sudo apt install python-is-python3`
 - [Linux] Open a command terminal, navigate to the project folder (e.g. S2AS__SMILES_to_AIOMFAC) and generate a virtual environment (venv) for the project.
   - (only if venv is not already installed on your system) execute `sudo apt install python3-venv` 
-  - create a new venv with command `python3 -m venv .venv`
+  - create a new venv with command `python -m venv .venv`
   - activate your new venv so Python is using it; command: `source .venv/bin/activate`
 
 #### (2) Open Babel
