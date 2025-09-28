@@ -27,7 +27,7 @@ The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any syst
 - [Linux] Open a command terminal, navigate to the project folder (e.g. S2AS__SMILES_to_AIOMFAC) and generate a virtual environment (venv) for the project.
   - execute `sudo apt install python3-venv` (if not already installed on your system)
   - create a new venv with command `python3 -m venv .venv`
-  - activate your new venv so Python is using it with command: `source .venv/bin/activate`
+  - activate your new venv so Python is using it; command: `source .venv/bin/activate`
 
 #### (2) Open Babel
 - [Windows] Download & install the Open Babel v3.1.1 (GUI) 64-bit for Windows. Download the [executable installer file](https://github.com/openbabel/openbabel/releases/); a newer version may be available at your time of installation (you could try the installation with that newer version).
@@ -45,13 +45,13 @@ The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any syst
 - [Windows] and [Linux] In a command prompt type: `obabel`\
   The version of the Open Babel software installed should be displayed – if not, check the installation steps above again and/or use an older, compatible version of Open Babel and the Python bindings (successful tests involved Open Babel v3.1.1 GUI 64bit on Windows and openbabel-wheel v3.1.1.22).
 - Test with a .bat script file (on Windows) or equivalent Python command:
-	- Included in the main folder of this repository is a `Run_SMILES_to_AIOMFAC_input.bat` script, which can be edited by any text editor. It executes the S2AS python program for a particular input file case. If on Windows, try running the .bat file (double click to run). If the script executes successfully, the installation above was successful.
-	- One potential issue with running the .bat files is that your default Python version is different from the one installed above. If so, either run the .bat file in a dedicated Python environment for an installed version of Python compatible with Open Babel or uninstall the newer versions of Python (unless you really need those elsewhere).
-	- For an equivalent test on Linux (or in a Windows command prompt): navigate in the command terminal to the `S2AS__SMILES_to_AIOMFAC` folder and execute the following command: \
+	- [Windows] Included in the main folder of this repository is a `Run_SMILES_to_AIOMFAC_input.bat` script, which can be edited by any text editor. It executes the S2AS python program for a particular input file case. [Windows] Try running the .bat file (double click to run). If the script executes successfully, the installation above was successful.
+	- [Windows] One potential issue with running the .bat files is that your default Python version is different from the one installed above. If so, either run the .bat file in a dedicated Python environment for an installed version of Python compatible with Open Babel.
+	- [Linux] For an equivalent test on Linux (or in a [Windows] command prompt): navigate in the command terminal to the `S2AS__SMILES_to_AIOMFAC` folder and execute the following command: \
  ```python SMILES_to_AIOMFAC_input.py ./InputFiles/smiles_1409.txt```.\
  As with the .bat example, this runs the S2AS program for the smiles_1409.txt input file located in folder `InputFiles`. Related output files end up in folder `OutputFiles`.
 
-- Optional check when using the included Microsoft Visual Studio Community solution and project files (SMILES_to_AIOMFAC.sln); this requires that you have MS Visual Studio installed with Python support.
+- [Windows] Optional check when using the included Microsoft Visual Studio Community solution and project files (SMILES_to_AIOMFAC.sln); this requires that you have MS Visual Studio installed with Python support.
 	- Open the `SMILES_to_AIOMFAC.sln` program from the main folder (S2AS__SMILES_to_AIOMFAC) in MS Visual Studio. Check that Python 3.xx (64-bit) is set as the Python Environment (the installed version compatible with the Open Babel bindings outlined in step 3). Also check that the epam.indigo package is part of the Python environment set to be used for the current Visual Studio project (if not, add it via the environment-specific package manager in Visual Studio).
 	- Run the program with a test input file like "InputFiles/smiles_0001.txt" see related settings near source code line 73 in file `SMILES_to_AIOMFAC_input.py`;
 	- If the S2AS program runs without errors in Visual Studio, then all necessary packages should be present; else, check for missing packages and/or potential causes of errors (such as conflict with another installed Python version or environment).
@@ -82,7 +82,7 @@ Once the two input files have been prepared, you are ready to run the Python scr
   - The generated output will be found as a file labelled `input_????.txt` in folder `OutputFiles`. It is named with prefix `input_` since it is an input file for AIOMFAC-web. You can view that file in a text editor, it states the AIOMFAC subgroups describing each input component. It also includes the AIOMFAC notation for water as component 1.
 - Option 2:
 	- Open a command terminal and navigate to your local `S2AS__SMILES_to_AIOMFAC` repository directory.
- 	- Execute the following command: `python .\SMILES_to_AIOMFAC_input.py ./InputFiles/smiles_????.txt`, where the command line argument 1 is the relative path to and  actual name of your `smiles_????.txt` file. As with Option 1, successful execution of the S2AS program will result in the generation of a file labelled `input_????.txt` in folder `OutputFiles`.
+ 	- Execute the following command: `python ./SMILES_to_AIOMFAC_input.py ./InputFiles/smiles_????.txt`, where the command line argument 1 is the relative path to and  actual name of your `smiles_????.txt` file. As with Option 1, successful execution of the S2AS program will result in the generation of a file labelled `input_????.txt` in folder `OutputFiles`.
 - Option 3: (Visual Studio or other IDE)
 	- Alternatively, if code debugging is of interest and/or structures of the molecules and the mapping of AIOMFAC subgroups should be visualized, you can run the Visual Studio solution `SMILES_to_AIOMFAC.sln` (see also [Test the installation](#5-test-the-installation)).
  	- In this case, the file name of your customized SMILES input file should be entered on source code line 73 of `SMILES_to_AIOMFAC_input.py` (within Visual Studio).
@@ -94,3 +94,5 @@ Once the two input files have been prepared, you are ready to run the Python scr
 > For smaller systems (less than ~50 components), the generated AIOMFAC-web-style input files (`input_????.txt`) can, e.g., be used for mixture activity coefficient computations with the [AIOMFAC-web model](https://aiomfac.lab.mcgill.ca/index.html). For that purpose, the `input_????.txt` should be further modified in a text editor to add, near the end, rows of temperature and component mole fractions (or mass fractions) of interest. The S2AS program writes a single, generic line of composition and temperature inputs for AIOMFAC-web – modify that line and add similar rows (as needed). An example file for such mixture composition inputs is shown [here](https://aiomfac.lab.mcgill.ca/examples/input_examp1.txt). Once your `input_????.txt` file has been edited to include the desired composition points, it can be [uploaded to AIOMFAC-web](https://aiomfac.lab.mcgill.ca/file_upload.html) and run online for generating AIOMFAC predictions of nonideal mixing.
 >
 > The AIOMFAC thermodynamic mixing model for single-liquid-phase systems and related code are also accessible via [the AIOMFAC repository](https://github.com/andizuend/AIOMFAC). That version operates with S2AS-generated input files.
+>
+> The generated AIOMFAC-web input file and the related `input_concentrations_????.txt` file can be used as inputs for the [2D polarity--volatility lumping framework](https://github.com/andizuend/2D_Polarity_Volatility_lumping). In fact, that repository relies in part on the S2AS tool.
