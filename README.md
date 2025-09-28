@@ -21,28 +21,29 @@ The **S2AS tool** generates a valid AIOMFAC (-web) model input file for any syst
 
 #### (1) Python and pip installation / updates
 - [Windows] Download & install Python v3.13.7 or newer for 64-bit on Windows, e.g. from [here](https://www.python.org/downloads/windows/). Version 1.0 of the S2AS tool has been confirmed to work with Python v3.13.7 (as well as the older v3.10.10).
-- [Windows] Make sure that the python 'pip' is installed and up to date. In a Windows command prompt with administrator rights (click Run as Administrator) type:  
+- [Windows] Make sure that the python 'pip' is installed and up to date. In a Windows command prompt with administrator rights (click Run as Administrator) type  
 	`python -m pip install --upgrade pip`
 - [Linux] Make sure a recent version of python3 is installed (check in a terminal with command `python --version` or `python3 --version`). For convenience make sure that python refers to python3 via command `sudo apt install python-is-python3`
 - [Linux] Open a command terminal, navigate to the project folder (e.g. S2AS__SMILES_to_AIOMFAC) and generate a virtual environment (venv) for the project.
   - execute `sudo apt install python3-venv` (if not already installed on your system)
-  - create a new venv with command: `python3 -m venv .venv`
+  - create a new venv with command `python3 -m venv .venv`
   - activate your new venv so Python is using it with command: `source .venv/bin/activate`
 
 #### (2) Open Babel
-- Download & install the Open Babel v3.1.1 (GUI) 64-bit for Windows. Download the [executable installer file](https://github.com/openbabel/openbabel/releases/); a newer version may be available at your time of installation (you could try the installation with that newer version).
+- [Windows] Download & install the Open Babel v3.1.1 (GUI) 64-bit for Windows. Download the [executable installer file](https://github.com/openbabel/openbabel/releases/); a newer version may be available at your time of installation (you could try the installation with that newer version).
 
 #### (3) Python bindings to openbabel (and pybel)
-- To install Python openbabel bindings on Windows, I recommend using a precompiled wheel (`.whl` file).\
+- [Windows] To install Python openbabel bindings on Windows, I recommend using a precompiled wheel (`.whl` file).\
   Try: `pip install openbabel-wheel`, see also: [https://pypi.org/project/openbabel-wheel/](https://pypi.org/project/openbabel-wheel/) for dependencies and compatible Python versions.
+- [Linux] To install Python openbabel execute command `pip install openbabel-wheel`
 
 #### (4) Indigo toolkit
-For use of the Indigo toolkit within the S2AS program, the related package and python bindings need to be installed:
+[Windows] and [Linux] For use of the Indigo toolkit within the S2AS program, the related package and python bindings need to be installed:
 - Run in a command prompt with administrator rights:  `pip install epam.indigo`
 
 #### (5) Test the installation
-- In a command prompt type: `obabel`\
-  The version of the Open Babel software installed should be displayed -- if not, check the installation steps above again and/or use an older, compatible version of Open Bable and the Python bindings (successful tests involved Open Babel v3.1.1 GUI 64bit on Windows and openbabel-wheel v3.1.1.22).
+- [Windows] and [Linux] In a command prompt type: `obabel`\
+  The version of the Open Babel software installed should be displayed – if not, check the installation steps above again and/or use an older, compatible version of Open Babel and the Python bindings (successful tests involved Open Babel v3.1.1 GUI 64bit on Windows and openbabel-wheel v3.1.1.22).
 - Test with a .bat script file (on Windows) or equivalent Python command:
 	- Included in the main folder of this repository is a `Run_SMILES_to_AIOMFAC_input.bat` script, which can be edited by any text editor. It executes the S2AS python program for a particular input file case. If on Windows, try running the .bat file (double click to run). If the script executes successfully, the installation above was successful.
 	- One potential issue with running the .bat files is that your default Python version is different from the one installed above. If so, either run the .bat file in a dedicated Python environment for an installed version of Python compatible with Open Babel or uninstall the newer versions of Python (unless you really need those elsewhere).
