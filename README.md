@@ -13,7 +13,7 @@ The **S2AS tool** generates a valid AIOMFAC model input file for any system char
 ## Dependencies
 - Open Babel and its Python bindings (see installation instructions below)
 - epam Indigo package
-- (optional) MS Visual Studio Community (for use of included project and solution files `SMILES_to_AIOMFAC.sln`)
+- (optional) [MS Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) (for use of included project and solution files `SMILES_to_AIOMFAC.sln`)
 
 ## Installation instructions
 > [!NOTE] 
