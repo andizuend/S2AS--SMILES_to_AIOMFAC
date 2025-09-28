@@ -89,7 +89,7 @@ if debugging_verbose:
 # from a non-local directory, e.g. the 2D lumping framework program
 pyfilepath = os.path.abspath(cmdline[0])
 locpath = os.path.dirname(pyfilepath)
-outpath = os.path.abspath(locpath +'./OutputFiles')
+outpath = os.path.abspath(locpath +'/OutputFiles')
 
 #clean up output figure folder to avoid presence of misleading older files:
 dirfilelist = os.listdir(outpath)

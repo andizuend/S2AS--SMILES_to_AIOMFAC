@@ -129,7 +129,7 @@ def writeAIOMFACfile(fname, outpath, SMILESlist, cpsubs, waterAsComp01):
    txtdataL.append('====')
 
    #output to text file:
-   outpfile = outpath+'./' + fname
+   outpfile = outpath+'/' + fname
    fileA = open(outpfile, 'w')
    for item in txtdataL:
       fileA.write("{}\n".format(item))
