@@ -86,7 +86,7 @@ Once the two input files have been prepared, you are ready to run the Python scr
   	- Visualizations and additional debbuging output can be enabled on line 51 of the `SMILES_to_AIOMFAC_input.py` file; setting `debugging_verbose = True`.
   	- In the latter case, additional `.png` files will be generated as part of the outputs in folder `OutputFiles`. These images show the structure of a molecule and the step-by-step matching of specific AIOMFAC subgroups that were detected during the parsing of a molecule.
   
-### Use S2AS output as input for other tools
+### Use of S2AS output as input for other tools
 > [!TIP]
 > For smaller systems (less than ~50 components), the generated AIOMFAC-web-style input files (`input_????.txt`) can, e.g., be used for mixture activity coefficient computations with the [AIOMFAC-web model](https://aiomfac.lab.mcgill.ca/index.html). For that purpose, the `input_????.txt` should be further modified in a text editor to add, near the end, rows of temperature and component mole fractions (or mass fractions) of interest. The S2AS program writes a single, generic line of composition and temperature inputs for AIOMFAC-web – modify that line and add similar rows (as needed). An example file for such mixture composition inputs is shown [here](https://aiomfac.lab.mcgill.ca/examples/input_examp1.txt). Once your `input_????.txt` file has been edited to include the desired composition points, it can be [uploaded to AIOMFAC-web](https://aiomfac.lab.mcgill.ca/file_upload.html) and run online for generating AIOMFAC predictions of nonideal mixing.
 
