@@ -20,7 +20,7 @@ The SMILES to AIOMFAC subgroups (**S2AS**) tool generates a valid AIOMFAC model 
 - [Windows] Download & install Python v3.13.7 or newer for 64-bit on Windows, e.g. from [here](https://www.python.org/downloads/windows/). Version 1.0 of the S2AS tool has been confirmed to work with Python v3.13.7 (as well as the older v3.10.10).
 - [Windows] Make sure that the python 'pip' is installed and up to date. In a Windows command prompt with administrator rights (click Run as Administrator) type  
 	`python -m pip install --upgrade pip`
-- [Linux] Make sure a recent version of python3 is installed (check in a terminal with command `python --version` or `python3 --version`). For convenience make sure that python refers to python3 via command `sudo apt install python-is-python3`
+- [Linux] Make sure a recent version of python3 is installed (check in a terminal with command `python --version` or `python3 --version`). For convenience make sure that python refers to python3 via command <br> `sudo apt install python-is-python3`
 - [Linux] Open a command terminal, navigate to the project folder (e.g. S2AS__SMILES_to_AIOMFAC) and generate a virtual environment (venv) for the project.
   - (only if venv is not already installed on your system) execute `sudo apt install python3-venv` 
   - create a new venv with command `python -m venv .venv`
