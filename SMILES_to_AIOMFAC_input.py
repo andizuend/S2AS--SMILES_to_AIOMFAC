@@ -21,7 +21,7 @@
 #  :: Authors & Copyright ::                                         
 #  Dalrin Ampritta Amaladhasan, Andreas Zuend, Dan Hassan-Barthaux 
 #  Dept. Atmospheric and Oceanic Sciences, McGill University      
-#  -> latest changes: 2025-08-11   
+#  -> latest changes: 2025-10-01   
 #                                                                                   
 #  :: License ::                                                                    
 #  This program is free software: you can redistribute it and/or modify it under the
@@ -41,14 +41,22 @@ import os.path
 import sys
 import time
 from shutil import copy
-from indigo import *
+try:
+   from indigo import *
+except ModuleNotFoundError:
+   print("** ERROR **: The 'indigo package' was not imported; it is required to run this program.")
+   print("             Please make sure you loaded the correct (virtual) Python environment.")
+   print("             See the README file and follow the instructions there.\n")
+   time.sleep(2)  # sleep for 5 seconds
+   sys.exit(11)   # exit the script with a non-zero status code
+#from indigo import *
 from indigo import renderer as renderer
 import ModSmilesTools
 from SMARTS_query_list import SMARTS_AIOMFAC
 from S2AS_mapping import detAIOMFACsubgs
 
 #--- Switches & Parameters ----------------------------------------------------
-debugging_verbose = False   # set to True to write detailed information to the terminal window and creation of images; set False to avoid most output;
+debugging_verbose = False  # set to True to write detailed information to the terminal window and creation of images; set False to avoid most output;
 replaceRadicals = True     # if set True, component SMILES indicating radical atoms (e.g. -C[O] or -C[O.]) will be 
                            # modified into non-radical species (by adding implicit H to reach non-radical valence);
 replaceRdbOO = True        # if set True, replace SMILES containing C=[O+][O-] with a similar one with C-O-OH hydroperoxy acid group;
